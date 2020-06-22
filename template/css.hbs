@@ -3,10 +3,18 @@
     src: {{{ src }}};
 }
 
+
+
 {{# if baseSelector }}
 {{ baseSelector }}:before {
 {{ else }}
-{{ baseTag }}[class^="{{classPrefix}}"]:before, {{ baseTag }}[class*=" {{classPrefix}}"]:before {
+{{# each baseTag }}
+{{{ this }}}
+{{/each}} {
+{{/ if }}
+{{# if centerVertical }}
+    display: flex;
+    justify-content: center;
 {{/ if }}
     font-family: {{ fontName }} !important;
     font-style: normal;

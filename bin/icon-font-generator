@@ -47,7 +47,8 @@ function init() {
     descent            : args.descent,
     fixedWidth         : args.mono,
     fontHeight         : args.height,
-    centerHorizontally : args.center
+    centerHorizontally : args.center,
+    centerVertical     : args.middle
   })
 
   const calledEmpty = Object.keys(args).length === 1 && args._.length === 0
@@ -122,14 +123,15 @@ function showHelp() {
     '  -j, --json       '.bold + 'Generate JSON map file if true (Default: true)\n' +
     '  --jsonpath       '.bold + 'JSON output path (Defaults to <out>/<name>.json)\n' +
     '  -p, --prefix     '.bold + 'CSS classname prefix for icons (Default: icon)\n' +
-    '  -t, --tag        '.bold + 'CSS base selector for icons (Default: i)\n' +
+    '  -t, --tag        '.bold + 'CSS base selector for icons (Default: i) (multiple tag use "," separator) \n' +
     '  --selector       '.bold + 'Use a selector instead of \'tag + prefix\' (Default: null)\n' +
     '  --normalize      '.bold + 'Normalize icons sizes (Default: false)\n' +
     '  --round          '.bold + 'Setup SVG rounding (Default: 10e12)\n' +
     '  --descent        '.bold + 'Offset applied to the baseline (Default: 0)\n' +
     '  --mono           '.bold + 'Make font monospace (Default: false)\n' +
     '  --height         '.bold + 'Fixed font height value\n' +
-    '  --center         '.bold + 'Center font horizontally'
+    '  --center         '.bold + 'Center font horizontally\n' +
+    '  --middle         '.bold + 'Center font vertical'
   )
 }
 
