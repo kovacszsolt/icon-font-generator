@@ -1,5 +1,5 @@
 {
-  "name": "kovacszsolt-icon-font-generator",
+  "name": "icon-font-generator-kovacszsolt",
   "version": "1.0.1",
   "description": "Easy-to-use, pre-configured cli tool to generate webfont icon kits from a bunch of .svg files",
   "main": "index.js",
